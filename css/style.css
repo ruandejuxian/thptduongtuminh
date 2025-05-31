@@ -1,0 +1,347 @@
+/* Reset CSS cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background: #3b5998; /* Màu xanh dương đậm, có thể thay đổi */
+    color: #fff;
+    padding: 1rem 0;
+    border-bottom: #0779e4 3px solid;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    max-height: 85px; /* Điều chỉnh kích thước logo */
+    border-radius: 50%;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #c1c1c1;
+}
+
+/* Banner */
+.banner img {
+    width: 100%;
+    height: 400px;
+    display: block;
+}
+
+/* Main content */
+main {
+    padding-top: 20px;
+}
+
+.section {
+    background: #fff;
+    padding: 30px 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.section h2 {
+    color: #3b5998;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2em;
+}
+
+/* Giới thiệu */
+.content-flex {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.content-flex.reverse {
+    flex-direction: row-reverse;
+}
+
+.text-content {
+    flex: 2;
+}
+
+.text-content p {
+    margin-bottom: 15px;
+}
+
+.image-content {
+    flex: 1;
+}
+
+.image-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+
+/* Tin tức */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.news-item {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.news-item img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.news-item h3 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.news-item p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.read-more {
+    display: inline-block;
+    background: #3b5998;
+    color: #fff;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+    background: #2a4377;
+}
+
+/* Sự kiện */
+.event-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.event-item {
+    display: flex;
+    gap: 20px;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.event-date {
+    background-color: #3b5998;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+    min-width: 70px;
+}
+
+.event-date .month {
+    display: block;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.event-date .day {
+    display: block;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.event-details h3 {
+    color: #333;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+
+.event-details p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+/* Tuyển sinh */
+#tuyen-sinh ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+#tuyen-sinh ul li {
+    margin-bottom: 5px;
+}
+
+/* Liên hệ */
+.contact-info {
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+.contact-info p strong {
+    color: #3b5998;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-size: 1em;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    background: #3b5998;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #2a4377;
+}
+
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 20px;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .social-media img {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    transition: opacity 0.3s ease;
+}
+footer .social-media img:hover {
+    opacity: 0.7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        padding-top: 10px;
+    }
+
+    header nav ul li {
+        margin: 0 10px;
+    }
+
+    .content-flex, .content-flex.reverse {
+        flex-direction: column;
+    }
+
+    .image-content {
+        margin-top: 20px;
+        order: -1; /* Đưa ảnh lên trên trên mobile nếu cần */
+    }
+    .content-flex.reverse .image-content {
+        order: -1;
+    }
+
+
+    .news-grid {
+        grid-template-columns: 1fr; /* Một cột trên mobile */
+    }
+
+    .event-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    .event-date {
+        margin-bottom: 10px;
+    }
+
+    footer .container {
+        flex-direction: column;
+    }
+    footer .social-media {
+        margin-top: 10px;
+    }
+}
