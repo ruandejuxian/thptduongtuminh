@@ -1,0 +1,82 @@
+:root {
+  /* Màu sắc chính */
+  --primary-color: #3b5998;
+  --primary-color-dark: #2a4377;
+  --primary-color-light: #4f78c4;
+  --secondary-color: #0779e4;
+  
+  /* Màu nền */
+  --bg-color: #f4f4f4;
+  --bg-color-light: #fff;
+  --bg-color-dark: #e0e0e0;
+  
+  /* Màu văn bản */
+  --text-color: #333;
+  --text-color-light: #666;
+  --text-color-inverse: #fff;
+  
+  /* Màu viền */
+  --border-color: #ddd;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  
+  /* Dark mode colors */
+  --dark-bg-color: #121212;
+  --dark-bg-color-light: #1e1e1e;
+  --dark-bg-color-lighter: #2d2d2d;
+  --dark-text-color: #e0e0e0;
+  --dark-text-color-light: #a0a0a0;
+  --dark-border-color: #444;
+  --dark-shadow-color: rgba(0, 0, 0, 0.3);
+  
+  /* Kích thước */
+  --header-height: 80px;
+  --footer-height: 100px;
+  --container-width: 80%;
+  --border-radius: 5px;
+  
+  /* Thời gian transition */
+  --transition-speed: 0.3s;
+  
+  /* Z-index layers */
+  --z-back: -1;
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+/* Dark mode */
+.dark-mode {
+  --bg-color: var(--dark-bg-color);
+  --bg-color-light: var(--dark-bg-color-light);
+  --bg-color-dark: var(--dark-bg-color-lighter);
+  --text-color: var(--dark-text-color);
+  --text-color-light: var(--dark-text-color-light);
+  --border-color: var(--dark-border-color);
+  --shadow-color: var(--dark-shadow-color);
+}
+
+/* Media query variables */
+@media (max-width: 1200px) {
+  :root {
+    --container-width: 90%;
+  }
+}
+
+@media (max-width: 992px) {
+  :root {
+    --header-height: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --container-width: 95%;
+  }
+}
+
+@media (max-width: 576px) {
+  :root {
+    --header-height: 60px;
+  }
+}

@@ -1,0 +1,74 @@
+/* Ensure banner image displays correctly */
+.banner {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    width: 100%;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+/* Link gioi-thieu.html with about.css */
+@import url('about.css');
+
+/* Improve animation for elements when scrolling */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Add animation to flip countdown digits */
+.countdown-digit.flip {
+    animation: flipAnimation 0.5s ease;
+}
+
+@keyframes flipAnimation {
+    0% {
+        transform: rotateX(0);
+    }
+    50% {
+        transform: rotateX(90deg);
+    }
+    100% {
+        transform: rotateX(0);
+    }
+}
+
+/* Enhance scrollbar appearance */
+::-webkit-scrollbar {
+    width: 14px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-color);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 10px;
+    border: 3px solid var(--bg-color);
+    transition: background-color var(--transition-speed);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color-dark);
+}
+
+/* Improve mobile menu toggle position */
+.mobile-menu-toggle {
+    margin-left: 15px;
+}
